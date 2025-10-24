@@ -1,6 +1,6 @@
 # Design-Verification
 
-This directory contains all my finished and ongoing Design Verification Projects
+Directory containing all my finished and ongoing Design Verification projects
 
 Languages used for Design Verification
   - SystemVerilog (SV)
