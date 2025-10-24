@@ -1,3 +1,3 @@
 # Gate-Level-Synthesis
 
-This directory contains all my finished and ongoing Gate-Level Synthesis Projects
+Directory containing all my finished and ongoing Gate-Level Synthesis projects
