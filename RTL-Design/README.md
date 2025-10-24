@@ -1,6 +1,6 @@
 # RTL-Design
 
-This directory contains all my finished and ongoing RTL Design projects
+Directory containing all my finished and ongoing RTL Design projects
 
 Languages used for RTL Design
   - Verilog
