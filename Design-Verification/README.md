@@ -8,4 +8,5 @@ Languages used for Design Verification
 
 Tools used for Design Verification
   - Synopsys VCS + Verdi Waveform Viewer
-  - Intel Questa (previously Intel ModelSim)
+  - Intel Questa
+  - Mentor Graphics ModelSim
