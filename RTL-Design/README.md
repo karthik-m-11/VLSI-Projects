@@ -8,4 +8,5 @@ Languages used for RTL Design
 Tools used for RTL Design
   - Linux
   - Icarus Verilog
-  - Intel Questa (previously Intel ModelSim)
+  - Intel Questa
+  - Mentor Graphics ModelSim
