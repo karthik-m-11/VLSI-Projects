@@ -1,6 +1,6 @@
 # Physical-Layout
 
-Directory containing all my finished and ongoing Phsycial Layout Projects
+Directory containing all my finished and ongoing Phsycial Layout projects
 
 Tools used for Physical Layout
   - Cadence Virtuoso
