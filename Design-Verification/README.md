@@ -7,6 +7,5 @@ Languages used for Design Verification
   - Universal Verification Methodology (UVM)
 
 Tools used for Design Verification
+  - Linux
   - Synopsys VCS + Verdi Waveform Viewer
-  - Intel Questa
-  - Mentor Graphics ModelSim
