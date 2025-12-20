@@ -1,0 +1,46 @@
+uvm_apb/
+├── src/
+│   ├── dut.sv
+│   ├── if.sv
+│   └── tb_top.sv
+│
+├── env/
+│   ├── env.sv
+│   ├── agent.sv
+│   ├── driver.sv
+│   ├── sequencer.sv
+│   ├── monitor.sv
+│   ├── scoreboard.sv
+│   └── coverage.sv
+│
+├── sequences/
+│   ├── seq_item.sv
+│   ├── seq_lib.sv
+│   └── directed/
+│       ├── seq_read.sv
+│       ├── seq_write.sv
+│       ├── seq_burst.sv
+│       └── seq_error.sv
+│
+├── tests/
+│   ├── test_base.sv
+│   ├── test_reset.sv
+│   ├── test_sanity.sv
+│   ├── test_read.sv
+│   ├── test_write.sv
+│   ├── test_read_after_write.sv
+│   ├── test_burst.sv
+│   ├── test_error.sv
+│   └── test_random.sv
+│
+├── pkg/
+│   ├── pkg.sv
+│   ├── defines.svh
+│   └── macros.svh
+│
+├── scripts/
+│   ├── Makefile
+│   ├── run.pl
+│   ├── run.tcl
+│   ├── filelist.f
+│   └── regression.cfg
