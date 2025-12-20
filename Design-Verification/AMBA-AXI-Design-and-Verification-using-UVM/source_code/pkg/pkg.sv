@@ -1,5 +1,5 @@
-// pkg/uvm_pkg.sv
-package apb_uvm_pkg;
+// pkg/pkg.sv
+package pkg;
 
   // Import UVM
   import uvm_pkg::*;
@@ -12,10 +12,10 @@ package apb_uvm_pkg;
   // Transaction & sequences
   `include "../sequences/seq_item.sv"
   `include "../sequences/seq_lib.sv"
-  `include "../sequences/directed/read_seq.sv"
-  `include "../sequences/directed/write_seq.sv"
-  `include "../sequences/directed/burst_seq.sv"
-  `include "../sequences/directed/error_seq.sv"
+  `include "../sequences/seq_read.sv"
+  `include "../sequences/seq_write.sv"
+  `include "../sequences/seq_burst.sv"
+  `include "../sequences/seq_error.sv"
 
   // Environment components
   `include "../uvm_env/env.sv"
