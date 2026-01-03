@@ -1,0 +1,89 @@
+library(mux_lib) {
+  delay_model : table_lookup;
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  current_unit : "1mA";
+  capacitive_load_unit(1,pf);
+
+  slew_lower_threshold_pct_rise : 20;
+  slew_upper_threshold_pct_rise : 80;
+  slew_lower_threshold_pct_fall : 20;
+  slew_upper_threshold_pct_fall : 80;
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+
+  cell (INVX1) {
+    area : 1.0;
+    pin(A) { direction : input; capacitance : 0.01; }
+    pin(Y) {
+      direction : output;
+      function : "!(A)";
+      max_capacitance : 0.05;
+      timing() {
+        related_pin : "A";
+        timing_sense : negative_unate;
+		cell_rise(scalar) { values("0.10"); }
+		cell_fall(scalar) { values("0.10"); }
+		rise_transition(scalar) { values("0.10"); }
+        fall_transition(scalar) { values("0.10"); }
+		
+      }
+    }
+  }
+
+  cell (AND2X1) {
+    area : 1.0;
+    pin(A) { direction : input; capacitance : 0.01; }
+    pin(B) { direction : input; capacitance : 0.01; }
+    pin(Y) {
+      direction : output;
+      function : "(A & B)";
+      max_capacitance : 0.05;
+      timing() {
+        related_pin : "A";
+        timing_sense : positive_unate;
+		cell_rise(scalar) { values("0.10"); }
+		cell_fall(scalar) { values("0.10"); }
+		rise_transition(scalar) { values("0.10"); }
+        fall_transition(scalar) { values("0.10"); }
+      }
+      timing() {
+        related_pin : "B";
+        timing_sense : positive_unate;
+		cell_rise(scalar) { values("0.10"); }
+		cell_fall(scalar) { values("0.10"); }
+		rise_transition(scalar) { values("0.10"); }
+        fall_transition(scalar) { values("0.10"); }
+      }
+    }
+  }
+
+  cell (OR2X1) {
+    area : 1.0;
+    pin(A) { direction : input; capacitance : 0.01; }
+    pin(B) { direction : input; capacitance : 0.01; }
+    pin(Y) {
+      direction : output;
+      function : "(A | B)";
+      max_capacitance : 0.05;
+      timing() {
+        related_pin : "A";
+        timing_sense : positive_unate;
+		cell_rise(scalar) { values("0.10"); }
+		cell_fall(scalar) { values("0.10"); }
+		rise_transition(scalar) { values("0.10"); }
+        fall_transition(scalar) { values("0.10"); }
+      }
+      timing() {
+        related_pin : "B";
+        timing_sense : positive_unate;
+		cell_rise(scalar) { values("0.10"); }
+		cell_fall(scalar) { values("0.10"); }
+		rise_transition(scalar) { values("0.10"); }
+        fall_transition(scalar) { values("0.10"); }
+      }
+    }
+  }
+}
