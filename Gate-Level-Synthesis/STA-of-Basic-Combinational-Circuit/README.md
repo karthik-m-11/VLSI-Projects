@@ -1,1 +1,1 @@
-# STA-of-Basic-Combinational-Circuits
+# STA-of-Basic-Combinational-Circuit
